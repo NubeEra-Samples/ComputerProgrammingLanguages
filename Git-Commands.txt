@@ -1,0 +1,5 @@
+git --version
+git init
+git remote add origin https://github.com/NubeEra-Samples/PythonPrograms.git
+git add .
+git commit -m "1.Data Types"
