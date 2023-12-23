@@ -1,6 +1,17 @@
+Check git:-
+-----------
 git --version
+
+One Time Configuration:-
+------------------------
 git init
 git remote add origin https://github.com/NubeEra-Samples/PythonPrograms.git
+git config user.name "YOUR_GITHUB_USER_NAME"
+git config user.email "YOUR_GITHUB_USER_EMAIL"
+
+
+Everytime:-
+-----------
 git add .
-git commit -m "1.Data Types"
+git commit -m "MSG"
 git push -u origin master
