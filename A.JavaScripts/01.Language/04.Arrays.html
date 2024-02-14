@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Demo</title>
+</head>
+<body>
+
+    <script>
+        // Creating arrays
+        var fruits = ['Apple', 'Banana', 'Orange', 'Grapes'];
+        var numbers = [1, 2, 3, 4, 5];
+
+        // Displaying original arrays
+        console.log('Original Array - Fruits:', fruits);
+        console.log('Original Array - Numbers:', numbers);
+
+        // Using map to create a new array with modified elements
+        var mappedFruits = fruits.map(function(fruit) {
+            return fruit.toUpperCase();
+        });
+
+        console.log('Mapped Array (toUpperCase) - Fruits:', mappedFruits);
+
+        // Using filter to create a new array with selected elements
+        var filteredNumbers = numbers.filter(function(number) {
+            return number % 2 === 0; // Filter even numbers
+        });
+
+        console.log('Filtered Array (even numbers) - Numbers:', filteredNumbers);
+
+        // Using reduce to perform an operation on array elements
+        var sumOfNumbers = numbers.reduce(function(accumulator, currentValue) {
+            return accumulator + currentValue;
+        }, 0);
+
+        console.log('Sum of Numbers:', sumOfNumbers);
+
+        // Multi-dimensional array
+        var matrix = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+
+        // Displaying the multi-dimensional array
+        console.log('Multi-dimensional Array - Matrix:', matrix);
+
+        // Accessing an element in the multi-dimensional array
+        var element = matrix[1][2];
+        console.log('Accessing Element (row 1, column 2) in Matrix:', element);
+    </script>
+
+</body>
+</html>

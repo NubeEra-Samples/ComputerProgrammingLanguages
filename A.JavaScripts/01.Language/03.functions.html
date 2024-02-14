@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Function Demo</title>
+</head>
+<body>
+
+    <script>
+        // Function Declaration
+        function greet(name) {
+            // Function Scope
+            var greeting = "Hello"; 
+
+            // Displaying a greeting with the provided name
+            console.log(greeting + ", " + name + "!");
+        }
+
+        // Function Expression
+        var multiply = function(a, b) {
+            // Function Scope
+            var result = a * b;
+
+            // Returning a value
+            return result;
+        };
+
+        // Global Scope
+        var globalVar = "I am a global variable.";
+
+        // Function Call with Arguments
+        greet("John");
+
+        // Function Call with Arguments and Return Value
+        var product = multiply(5, 3);
+        console.log("Product:", product);
+
+        // Accessing a Global Variable
+        console.log(globalVar);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript and DOM Manipulation Demo</title>
+</head>
+<body>
+
+    <h2>JavaScript and DOM Manipulation Demo</h2>
+    
+    <button onclick="executeJavaScriptCode()">Run JavaScript Code</button>
+
+    <div id="outputContainer"></div>
+
+    <script>
+        function executeJavaScriptCode() {
+            // Conditional statements (if, else if, else)
+            let temperature = 25;
+            let resultMessage;
+
+            if (temperature > 30) {
+                resultMessage = "It's a hot day!";
+            } else if (temperature > 20) {
+                resultMessage = "It's a warm day.";
+            } else {
+                resultMessage = "It's a cold day.";
+            }
+
+            // Switch statement
+            let dayOfWeek = 3;
+            let dayName;
+
+            switch (dayOfWeek) {
+                case 1:
+                    dayName = "Monday";
+                    break;
+                case 2:
+                    dayName = "Tuesday";
+                    break;
+                case 3:
+                    dayName = "Wednesday";
+                    break;
+                case 4:
+                    dayName = "Thursday";
+                    break;
+                case 5:
+                    dayName = "Friday";
+                    break;
+                default:
+                    dayName = "Weekend";
+            }
+
+            // Loops (for, while, do-while)
+            let forLoopOutput = "For loop:<br>";
+            for (let i = 1; i <= 5; i++) {
+                forLoopOutput += `Iteration ${i}<br>`;
+            }
+
+            let whileLoopOutput = "<br>While loop:<br>";
+            let count = 0;
+            while (count < 3) {
+                whileLoopOutput += `Count: ${count}<br>`;
+                count++;
+            }
+
+            let doWhileLoopOutput = "<br>Do-While loop:<br>";
+            let num = 5;
+            do {
+                doWhileLoopOutput += `Number: ${num}<br>`;
+                num--;
+            } while (num > 0);
+
+            // Break and continue statements
+            let breakStatementOutput = "<br>Break statement:<br>";
+            for (let i = 1; i <= 5; i++) {
+                if (i === 3) {
+                    breakStatementOutput += "Breaking the loop at iteration 3.<br>";
+                    break;
+                }
+                breakStatementOutput += `Iteration ${i}<br>`;
+            }
+
+            let continueStatementOutput = "<br>Continue statement:<br>";
+            for (let i = 1; i <= 5; i++) {
+                if (i === 3) {
+                    continueStatementOutput += "Skipping iteration 3.<br>";
+                    continue;
+                }
+                continueStatementOutput += `Iteration ${i}<br>`;
+            }
+
+            // Displaying results in the outputContainer
+            document.getElementById("outputContainer").innerHTML = `
+                <p>${resultMessage}</p>
+                <p>Today is ${dayName}.</p>
+                <p>${forLoopOutput}</p>
+                <p>${whileLoopOutput}</p>
+                <p>${doWhileLoopOutput}</p>
+                <p>${breakStatementOutput}</p>
+                <p>${continueStatementOutput}</p>
+            `;
+        }
+    </script>
+
+</body>
+</html>
