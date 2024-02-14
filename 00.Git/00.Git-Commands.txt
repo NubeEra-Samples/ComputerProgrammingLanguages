@@ -5,7 +5,7 @@ git --version
 One Time Configuration:-
 ------------------------
 git init
-git remote add origin https://github.com/NubeEra-Samples/PythonPrograms.git
+git remote add origin https://github.com/NubeEra-Samples/FSD-Practicals.git
 git config user.name "YOUR_GITHUB_USER_NAME"
 git config user.email "YOUR_GITHUB_USER_EMAIL"
 
