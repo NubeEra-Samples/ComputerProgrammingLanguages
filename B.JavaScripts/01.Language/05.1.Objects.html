@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation with Objects and JSON</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>DOM Manipulation with Objects and JSON</h2>
+
+<div id="output"></div>
+
+<script>
+    // Sample object representing a person
+    var person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 25,
+        address: {
+            street: "123 Main St",
+            city: "Anytown",
+            zipCode: "12345"
+        },
+        greet: function() {
+            return "Hello, " + this.firstName + " " + this.lastName + "!";
+        }
+    };
+
+    // Displaying person information on the page
+    function displayPersonInfo() {
+        var outputDiv = document.getElementById("output");
+
+        // Clear previous content
+        outputDiv.innerHTML = "";
+
+        // Displaying properties of the person object
+        for (var key in person) {
+            if (typeof person[key] !== "function") {
+                var paragraph = document.createElement("p");
+                paragraph.textContent = key + ": " + person[key];
+                outputDiv.appendChild(paragraph);
+            }
+        }
+
+        // Displaying the result of the greet method
+        var greetParagraph = document.createElement("p");
+        greetParagraph.textContent = "Greeting: " + person.greet();
+        outputDiv.appendChild(greetParagraph);
+    }
+
+    // Updating person information using JSON notation
+    function updatePersonInfo() {
+        var jsonInput = '{"firstName": "Alice", "lastName": "Smith", "age": 30, "address": {"street": "456 Oak St", "city": "Newtown", "zipCode": "67890"}}';
+
+        // Parsing JSON string to create a new person object
+        var newPerson = JSON.parse(jsonInput);
+
+        // Updating the original person object with the new data
+        for (var key in newPerson) {
+            person[key] = newPerson[key];
+        }
+
+        // Displaying the updated information
+        displayPersonInfo();
+    }
+
+    // Creating a button to trigger the update
+    var updateButton = document.createElement("button");
+    updateButton.textContent = "Update Person Info";
+    updateButton.addEventListener("click", updatePersonInfo);
+    document.body.appendChild(updateButton);
+
+    // Initial display of person information
+    displayPersonInfo();
+</script>
+
+</body>
+</html>

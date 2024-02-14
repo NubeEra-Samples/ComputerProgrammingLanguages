@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced DOM Manipulation with Objects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        #output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Advanced DOM Manipulation with Objects</h2>
+
+<div>
+    <button id="addButton">Add Element</button>
+    <button id="removeButton">Remove Last Element</button>
+</div>
+
+<div id="output"></div>
+
+<script>
+    var domManipulator = {
+        elements: [],
+        container: document.getElementById("output"),
+
+        addElement: function () {
+            var newElement = document.createElement("p");
+            newElement.textContent = "New Element #" + (this.elements.length + 1);
+            newElement.classList.add("added-element");
+
+            // Adding event listener to the new element
+            newElement.addEventListener("click", function () {
+                alert("You clicked on: " + newElement.textContent);
+            });
+
+            this.elements.push(newElement);
+            this.container.appendChild(newElement);
+        },
+
+        removeLastElement: function () {
+            if (this.elements.length > 0) {
+                var removedElement = this.elements.pop();
+                this.container.removeChild(removedElement);
+            }
+        }
+    };
+
+    // Adding event listeners to the buttons
+    document.getElementById("addButton").addEventListener("click", function () {
+        domManipulator.addElement();
+    });
+
+    document.getElementById("removeButton").addEventListener("click", function () {
+        domManipulator.removeLastElement();
+    });
+</script>
+
+</body>
+</html>
