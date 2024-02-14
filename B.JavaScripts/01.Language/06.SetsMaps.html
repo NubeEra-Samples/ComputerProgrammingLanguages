@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation with Set and Map</title>
+    <style>
+        /* Add some basic styling for better visibility */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM Manipulation with Set and Map</h1>
+
+    <div>
+        <label for="inputText">Enter text:</label>
+        <input type="text" id="inputText">
+        <button onclick="addToSet()">Add to Set</button>
+        <button onclick="addToMap()">Add to Map</button>
+    </div>
+
+    <div>
+        <h2>Set Example</h2>
+        <ul id="setList"></ul>
+    </div>
+
+    <div>
+        <h2>Map Example</h2>
+        <ul id="mapList"></ul>
+    </div>
+
+    <script>
+        // Initialize Set and Map objects
+        const textSet = new Set();
+        const textMap = new Map();
+
+        // Function to add text to the Set
+        function addToSet() {
+            const inputText = document.getElementById("inputText").value;
+            if (inputText.trim() !== "") {
+                textSet.add(inputText);
+                updateSetList();
+            }
+        }
+
+        // Function to add text to the Map with a unique key
+        function addToMap() {
+            const inputText = document.getElementById("inputText").value;
+            if (inputText.trim() !== "") {
+                const key = Date.now(); // Using timestamp as a unique key
+                textMap.set(key, inputText);
+                updateMapList();
+            }
+        }
+
+        // Function to update the Set list in the DOM
+        function updateSetList() {
+            const setList = document.getElementById("setList");
+            setList.innerHTML = ""; // Clear the existing list
+
+            textSet.forEach((item) => {
+                const listItem = document.createElement("li");
+                listItem.textContent = item;
+                setList.appendChild(listItem);
+            });
+        }
+
+        // Function to update the Map list in the DOM
+        function updateMapList() {
+            const mapList = document.getElementById("mapList");
+            mapList.innerHTML = ""; // Clear the existing list
+
+            textMap.forEach((value, key) => {
+                const listItem = document.createElement("li");
+                listItem.textContent = `Key: ${key}, Value: ${value}`;
+                mapList.appendChild(listItem);
+            });
+        }
+    </script>
+</body>
+</html>
