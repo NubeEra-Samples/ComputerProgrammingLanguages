@@ -16,20 +16,20 @@
     // ________________________________________________________
 
     
-    // let username = prompt("Enter Your Name")
-    // let password = prompt("Enter Your Password")
-    // if (username === "admin" && password === "admin123")
-    // {
-    //     alert('Welcome' + username)
-    // }
-    // else if (username === "admin" || password !== "admin123")
-    // {
-    //     alert("Incorrect password")        
-    // }
-    // else if (username !== "admin" || password === "admin123")
-    // {
-    //     alert("Incorrect username")        
-    // }
+    let username = prompt("Enter Your Name")
+    let password = prompt("Enter Your Password")
+    if (username === "admin" && password === "admin123")
+    {
+        alert('Welcome' + username)
+    }
+    else if (username === "admin" || password !== "admin123")
+    {
+        alert("Incorrect password")        
+    }
+    else if (username !== "admin" || password === "admin123")
+    {
+        alert("Incorrect username")        
+    }
 
     // ___________________________________________________________________________________________
 
