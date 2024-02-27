@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+        form
+        {
+            width: 50%;
+            margin: 100px 300px;
+            /* border: 1px solid black; */
+        }
+
+        input
+        {
+            margin: 10px;
+            border-radius: 5px;
+            padding: 10px 50px;
+        }
+
+        label
+        {
+            margin: 10px;
+        }
+        
+        div
+        {
+            width: 50%;
+            margin: 10px 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+<form>
+    <label for="name">First Name :</label>
+    <input type="text" id="name">
+
+    <br>
+
+    <label for="last_name"> Last Name :</label>
+    <input type="text" id="last_name">
+
+    <br>
+
+</form>    
+<button id="btn" onclick="result()">Enter</button>
+    
+    <div>
+        <label for="output">Output :</label>
+        <input type="text" id="output">
+    </div>
+
+    <script>
+        
+        document.getElementById("btn").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent default form submission behavior            
+        });
+    
+
+        function result()
+        {
+            let name = document.getElementById("name").value;
+            let last_name = document.getElementById("last_name").value;
+            let sum = name + ' ' + last_name;
+            document.getElementById("output").value = sum;
+        }
+    </script>
+</body>
+</html>

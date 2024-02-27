@@ -73,8 +73,8 @@ const complicatedDictionary = {
   }
 };
 
-// for (let personkey in complicatedDictionary)
-//     console.log("Person Name: " +( (complicatedDictionary[personkey].address.country=="India")?complicatedDictionary[personkey].name:""))
+for (let personkey in complicatedDictionary)
+    console.log("Person Name: " +( (complicatedDictionary[personkey].address.country=="India")?complicatedDictionary[personkey].name:""))
 
 // let persons = Object.values(complicatedDictionary).filter(person => person.address.country === "India")
 // // console.log(persons)
