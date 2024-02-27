@@ -87,47 +87,7 @@
 
 // console.log(allFruits)
 
-// ________________________________________Filter_Array_______________________________________________________________________
 
-// Filter Even Numbers: Given an array of numbers, use the filter method to create a new array containing only the even numbers.
-
-// Method-1:
-
-    // let evennumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    // let even = evennumbers.filter(function(a) {
-    //     return a % 2 == 0
-    //  })
-
-    // console.log(even)
-
-
- // Method-2:
-
-    //  let evennumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    //  let even = evennumbers.filter(a => a % 2 == 0)
-    //  console.log(even)
-   
-// ________________________________________________________________________________________________________________
-
-// Filter Names Starting with 'A': Given an array of names, use the filter method to create a
-// new array containing only the names that start with the letter 'A'.
-
-// let group = ["Ravi", "Arush", "Somaya", "Arnav", "Ankita", "Akashy"]
-// let students = group.filter(a => a.startsWith("A"))
-// console.log(students)
-
-// ____________________________________________________________________________________________________________________
-
-// let fiftyWords = ["apple", "banana", "carrot", "dog", "elephant", "fish", "grape", "hamburger", "ice cream", "jacket", "kite", "lemon", "monkey", "napkin", "orange", "pizza", "queen", "rabbit", "strawberry", "tiger", "umbrella", "vanilla", "watermelon", "xylophone", "yogurt", "zebra", "airplane", "ball", "cat", "duck", "egg", "frog", "giraffe", "hat", "igloo", "juice", "kangaroo", "lamp", "mango", "nest", "ostrich", "pear", "quilt", "rose", "snake", "table", "unicorn", "volcano", "wagon", "xylophone", "yacht"];
-// let words = fiftyWords.filter(a => a.length === 3)
-// console.log(words)
-
-
-// let fiftyWords = ["apple", "banana", "carrot", "dog", "elephant", "fish", "grape", "hamburger", "ice cream", "jacket", "kite", "lemon", "monkey", "napkin", "orange", "pizza", "queen", "rabbit", "strawberry", "tiger", "umbrella", "vanilla", "watermelon", "xylophone", "yogurt", "zebra", "airplane", "ball", "cat", "duck", "egg", "frog", "giraffe", "hat", "igloo", "juice", "kangaroo", "lamp", "mango", "nest", "ostrich", "pear", "quilt", "rose", "snake", "table", "unicorn", "volcano", "wagon", "xylophone", "yacht"];
-// let Number = parseInt(prompt("Enter Any Number for search words"))
-// let words = fiftyWords.filter(a => a.length === Number)
-// console.log(words)
-// ________________________________________________________________________________________________________________________________________________
 
 
   
