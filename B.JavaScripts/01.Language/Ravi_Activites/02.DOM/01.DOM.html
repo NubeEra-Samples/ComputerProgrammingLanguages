@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!----------------------------- Show Date Start-------------------------------->
+
+    <h2>Show Date</h2>
+    <p id="myElement"></p>
+    <br>
+    <button id="btn" onclick="ShowDate()">Click me to display Date and Time.</button>
+
+    <br><br>
+
+    <!----------------------------- Show Date End-------------------------------->
+
+    <!-----------------------------Checkbox Start-------------------------------->
+
+    <h2>Checkbox</h2>
+
+    <label for="myCheckbox">Checkbox :</label>
+    <input type="checkbox" id="myCheckbox" value="true">
+
+    <br>
+
+    <div id="output">Checkbox is disabled</div>
+    <br><br>
+
+    <!----------------------------- Checkbox End-------------------------------->
+
+    <h2>Select DOM Manipulation</h2>
+
+    <select name="fruitSelect" id="fruitSelect">
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+        <option value="mango">mango</option>
+        <option value="grape">Grape</option>
+        <option value="orange">Orange</option>
+    </select>
+
+    <p>You selected : <span id="selectedFruit"></span></p>
+
+    <!-----------------------------Form Start-------------------------------->
+
+        <h2>Form</h2>
+
+       <form action=" #">
+    
+        <input type="text" id="name" placeholder="Name">
+
+        <input type="text" id="last_name" placeholder="Last Name">
+
+        <button id="btn" onclick="add()">Enter</button>
+
+        <p>
+            <label for="result">Output :</label>
+            <input type="text" id="result">
+           </p>
+
+        </form>
+
+        <br><br>
+    <!-----------------------------Form End-------------------------------->
+
+    <!-----------------------------Numbers Add Strat-------------------------------->
+
+        <h2>Numbers Addition</h2>
+
+        <form action="#">
+            <input type="number" id="input_1" placeholder="Enter Number">
+            <input type="number" id="input_2" placeholder="Enter Number">
+
+            <button id="button" onclick="addNumbers()">Enter</button>
+
+            <p>
+                <label for="addNumbers">Output :</label>
+                <input type="number" id="Numaddition">
+            </p>
+        </form>
+
+    <!-----------------------------Numbers Add End-------------------------------->
+
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
