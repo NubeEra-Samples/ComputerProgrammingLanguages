@@ -4,15 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 100vh;
+}
+
+h3 {
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 30%;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="text"],
+button {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.btn-container {
+    text-align: center;
+}
+    </style>
 </head>
 <body>
-    <h3>majed Practice
-    </h3>
+    <h3>majed Practice</h3>
+    <form>
+        <div id="json-text" class="json-text">
+            <h3>Enter Email and Phone Number</h3>
+            <div>
+                <input type="email" id="emailInput" placeholder="Enter email">
+                <input type="tel" id="phoneInput" placeholder="Enter phone number">
+                <button type="button" onclick="generateJSON()">Generate JSON</button>
+            </div>
+            <div>
+                <input type="text" id="jsonOutput" placeholder="JSON output" readonly>
+            </div>
+        </div>
+        <div id="text-print" class="text-print">
+            <input type="text" name="firstname" id="firstname" placeholder="First name">
+            <input type="text" name="lastname" id="lastname" placeholder="Last name">
+            <button type="button" onclick="connect()">Get full name</button>
+            <input type="text" name="fullname" id="full-name">
+        </div>
+        <div id="dropdown-print" class="dropdown-print">
+            <select name="dropdown" id="dropdown" placeholder="Select option you desire" multiple>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+    </form>
 
-    <button onclick="executeJavaScriptCode()">Run JavaScript Code</button>
+<!-- <button onclick="ageRestriction()">Run JavaScript Code</button> -->
+ 
+    <!--<button onclick="executeJavaScriptCode()">Run JavaScript Code</button>
 
     <div id="outputContainer"></div>
-    <script src="statements.js"></script>
+    <script src="io.js"></script> -->
     <!-- <script src="statements.js"></script> -->
+    <script src="function.js"></script>
 </body>
 </html>
