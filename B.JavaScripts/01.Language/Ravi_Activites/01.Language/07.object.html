@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>DOM Manipulation with Objects and JSON</h2>
+
+    <div id="output"></div>
+
+   <script>
+
+    let person = {
+        firstName: "John",
+        lastName : "Doe",
+        age: 25,
+        address: {
+            stree: "123 Main  St",
+            city: "Anytown",
+            zipCode: "12345"
+        },
+        greet: function() {
+            return "Hello", + this.firstName + " " + this.lastName + "!";
+        }
+    };
+
+    function displayPersonInfo() {
+        let outputDiv = document.getElementById("output");
+        outputDiv.innerHTML = "";
+
+    for (var key in person) {
+        if (typeof person[key] !== "function")
+        {
+            let paragraph = document.createElement("p");
+            paragraph.textContent = key + ": " + person[key];
+            outputDiv.appendChiled(paragraph);
+        }
+    }
+
+        let greetParagraph = document.createElement("p")
+        greetParagraph.textContent = "Greeting: " + person.greet();
+        outputDiv.appendChiled(greetParagraph);
+    }
+
+    function updatePersonInfo() {
+        var jsonInput = '{"firstName": "Alice", "lastName": "Smith", "age": 30, "address": {"street": "456 oak St", "city": "Newtown", "zipCode": "67890"}}';
+
+        let newPerson = JSON.parse(jsonInput);
+
+        for (let key in  newPerson)
+    }
+   </script>
+
+</body>
+</html>

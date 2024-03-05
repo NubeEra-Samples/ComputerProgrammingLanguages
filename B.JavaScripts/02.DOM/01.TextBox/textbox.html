@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextBox Manipulation Demo</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>TextBox Manipulation Demo</h1>
+
+    <label for="textBox">Enter Text:</label>
+    <input type="text" id="textBox" placeholder="Type something...">
+
+    <div id="output"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var textBox = document.getElementById('textBox');
+            var outputDiv = document.getElementById('output');
+
+            // Event listener for input change
+            textBox.addEventListener('input', function () {
+                // Update the output div dynamically
+                outputDiv.textContent = "You entered: " + textBox.value;
+            });
+
+            // Event listener for focus
+            textBox.addEventListener('focus', function () {
+                textBox.style.border = '2px solid blue';
+            });
+
+            // Event listener for blur
+            textBox.addEventListener('blur', function () {
+                textBox.style.border = ''; // Remove the border when not focused
+            });
+
+            // Event listener for key press
+            textBox.addEventListener('keypress', function (event) {
+                console.log('Key pressed:', event.key);
+            });
+
+            // Event listener for key down
+            textBox.addEventListener('keydown', function (event) {
+                console.log('Key down:', event.key);
+            });
+
+            // Event listener for key up
+            textBox.addEventListener('keyup', function (event) {
+                console.log('Key up:', event.key);
+            });
+        });
+    </script>
+</body>
+</html>
