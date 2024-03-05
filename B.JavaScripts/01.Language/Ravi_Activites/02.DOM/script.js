@@ -1,5 +1,5 @@
 
-// Show Date
+//----------------------------- Show Date-----------------------------
 
 document.getElementById("btn")
 
@@ -8,7 +8,7 @@ function ShowDate()
   document.getElementById("myElement").innerHTML = Date();
 }
  
-// Checkbox
+// -------------------------Checkbox-------------------------------
 
 document.addEventListener('DOMContentLoaded', function() {
   let checkbox = document.getElementById("myCheckbox");
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// Select DOM Manipulation
+// -----------------------Select DOM Manipulation---------------------------
 
 document.addEventListener('DOMContentLoaded', function() {
   let fruitSelect = document.getElementById("fruitSelect");
@@ -55,7 +55,7 @@ function add(){
   document.getElementById("result").value = add;
 }
 
-// addition
+// -------------------------------------------------addition------------------------------------------------------
 
 document.getElementById("button").addEventListener("click", function(event) {
   event.preventDefault();
@@ -70,3 +70,8 @@ function addNumbers()
   let sum = result_1 + result_2;
   document.getElementById("Numaddition").value = sum;
 }
+
+// ------------------------ Changing Text Content ---------------------------------------
+
+let originalText =  document.getElementById("originalText");
+originalText.textContent = "This is updated text."
