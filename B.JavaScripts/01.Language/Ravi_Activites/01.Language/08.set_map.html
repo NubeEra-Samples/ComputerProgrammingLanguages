@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Add some basic styling for better visibility */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    
+   <h1>DOM Manipulation with Set and Map</h1>
+
+   <div>
+    <label for="inputText"></label>
+    <input type="text" id="inputText">
+    <button onclick="addToSet()">Add to Set</button>
+    <button onclick="addToMap()">Add to Map</button>
+   </div>
+
+   <div>
+    <h2>Set Example</h2>
+    <ul id="setList"></ul>
+   </div>
+
+   <div>
+    <h2>Map Example</h2>
+    <ul id="mapList"></ul>
+   </div>
+
+   <script>
+   
+        let textSet = new Set();
+        let textMap = new Map();
+
+        function addToSet() {
+            let inputText = document.getElementById("inputText").value;
+            if (inputText.trim() !== "") {
+                textSet.add(inputText);
+                updateSetList();
+            }
+        }
+
+        function addToMap() {
+            let inputText = document.getElementById("inputText").value;
+            if (inputText.trim() !== "") {
+                let key = Date.now();
+                textMap.set(key, inputText);
+                updateMapList();
+            }
+        }
+
+        function updateSetList() {
+            let setList = document.getElementById("setList");
+            setList.innerHTML = "";
+
+            textSet.forEach((item) => {
+                let listItem = document.createElement("li");
+                listItem.textContent = item;
+                setList.appendChild(listItem);
+            });
+        }
+
+
+        function updateMapList() {
+            let listItem = document.createElement("li");
+            mapList.innerHTML = "";
+
+            textMap.forEach((value, key) => {
+                let listItem = document.createElement("li");
+                listItem.textContent = `Key: ${key}, Value: ${value}`;
+                mapList.appendChild(listItem);
+            });
+        }
+
+   </script>
+
+</body>
+</html>
