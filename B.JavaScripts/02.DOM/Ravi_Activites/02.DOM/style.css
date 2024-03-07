@@ -56,7 +56,6 @@ form {
     width: 80%;
     padding: 8px;
     margin: 15px;
-    border: 1px solid #ccc;
     border-radius: 4px;
   }
   
@@ -85,3 +84,19 @@ form {
     border-radius: 4px;
   }
   
+  /* TextBox Manipulation Demo */
+
+  #textBox {
+    width: 20%;
+    padding: 8px;
+    margin: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  #inputText
+  {
+    margin-top: 20px;
+    font-weight: bold;
+    color: green;
+  }

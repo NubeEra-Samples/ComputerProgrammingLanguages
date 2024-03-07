@@ -75,3 +75,68 @@ function addNumbers()
 
 let originalText =  document.getElementById("originalText");
 originalText.textContent = "This is updated text."
+
+
+// ----------------------------TextBox Manipulation Demo--------------------------
+
+  document.addEventListener('DOMContentLoaded', function() {
+    let textBox = document.getElementById('textBox');
+    let inputText = document.getElementById('inputText') ;
+
+    textBox.addEventListener('input', function() {
+      inputText.textContent = "You entered: " + textBox.value;
+    });
+
+    textBox.addEventListener('focus', function() {
+      textBox.style.border = '2px solid blue';
+    });
+
+    textBox.addEventListener('blur', function() {
+      textBox.style.border = '';
+    });
+
+    textBox.addEventListener('keypress', function (event) {
+      console.log('key pressed:', event.key)
+    });
+
+    textBox.addEventListener('keydown', function (event) {
+      console.log('Key down:', event.key)
+    })
+
+    textBox.addEventListener('keyup', function (event) {
+      console.log('key up:', event.key)
+    });
+  })
+
+  //------------------------- Button Manipulation Demo----------------------
+
+  let changeTextBtn = document.getElementById('changeTextBtn');
+  let toggleBtn = document.getElementById('toggleBtn');
+
+  let buttonText = 'Click Me!'
+  let isButtonEnabled = true;
+
+  function changeButtonText() {
+    buttonText = prompt('Enter new text for the button:', buttonText);
+    if (buttonText === null) {
+      return;
+    }
+    updateButtonText();
+  }
+
+  function toggleButton() {
+    isButtonEnabled = !isButtonEnabled;
+    updateButtonState();
+  }
+
+  function updateButtonText() {
+    changeTextBtn.textContent = buttonText;
+  }
+
+  function updateButtonState() {
+    toggleBtn.textContent = isButtonEnabled ? 'Disable' : 'Enable';
+    changeTextBtn.disabled = !isButtonEnabled;
+  }
+
+  updateButtonText();
+  updateButtonState();
