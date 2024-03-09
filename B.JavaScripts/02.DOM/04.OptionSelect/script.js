@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", function(){
     var fruitSelect = document.getElementById("fruitSelect");
     var selectFruit = document.getElementById("selectedFruit");
