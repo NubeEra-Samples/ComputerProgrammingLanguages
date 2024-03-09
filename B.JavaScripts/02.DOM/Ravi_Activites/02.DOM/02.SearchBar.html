@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Search Result</h1>
+
+    <label for="search">Search :</label>
+    <input type="search" id="searchInput">
+
+    <br><br>
+
+    <button id="searchResult" onclick="Result()">Enter</button>
+
+    <br><br>
+
+    <div id="output"></div>
+    
+    <script>
+        
+        let jsonData = `[
+                    {"Name": "Lion", "Color": "Yellow"},
+                    {"Name": "Monkey", "Color": "Orange"},
+                    {"Name": "Fish", "Color": "Blue"},
+                    {"Name": "Cat", "Color": "Black"}
+                ]`
+
+    let data = JSON.parse(jsonData)
+
+
+        document.getElementById("btn").addEventListener("click", function(event) {
+            event.preventDefault();
+        });
+            
+        function Result() {
+
+            let search = document.getElementById("searchInput").value;
+            let sample = search
+            document.getElementById("output").value = search;
+
+        if (sample == 'a')
+            {
+                alert(`${a}`)
+            }
+        else
+            {
+                alert("Not Done")
+            }
+        };
+
+
+        
+
+
+
+    </script>
+</body>
+</html>
