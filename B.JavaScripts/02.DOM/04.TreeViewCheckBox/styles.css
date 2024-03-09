@@ -1,0 +1,38 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+.tree-node {
+    margin-left: 20px;
+}
+
+.tree-node ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.tree-node label {
+    cursor: pointer;
+}
+
+.tree-node input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.tree-node.collapsed ul {
+    display: none;
+}
+
+.tree-node.expanded ul {
+    display: block;
+}
+
+.tree-node.collapsed .toggle-icon::after {
+    content: '\25B8'; /* Right-pointing triangle */
+}
+
+.tree-node.expanded .toggle-icon::after {
+    content: '\25BE'; /* Down-pointing triangle */
+}
