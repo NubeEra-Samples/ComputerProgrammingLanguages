@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TreeView Example</title>
+    <style>
+        ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        li {
+            cursor: pointer;
+        }
+
+        li:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>TreeView Example</h1>
+
+    <div id="treeview"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Sample JSON data
+            var jsonData = {
+                "name": "Root",
+                "children": [
+                    {
+                        "name": "Node 1",
+                        "children": [
+                            { "name": "Node 1.1" },
+                            { "name": "Node 1.2" }
+                        ]
+                    },
+                    {
+                        "name": "Node 2",
+                        "children": [
+                            { "name": "Node 2.1" },
+                            { "name": "Node 2.2" }
+                        ]
+                    }
+                ]
+            };
+
+            // Function to create the TreeView
+            function createTreeView(parentElement, data) {
+                var ul = document.createElement('ul');
+
+                data.forEach(function (item) {
+                    var li = document.createElement('li');
+                    li.textContent = item.name;
+
+                    if (item.children) {
+                        li.classList.add('has-children');
+                        createTreeView(li, item.children);
+                    }
+
+                    ul.appendChild(li);
+                });
+
+                parentElement.appendChild(ul);
+            }
+
+            // Get the target element for the TreeView
+            var treeviewElement = document.getElementById('treeview');
+
+            // Create the TreeView
+            createTreeView(treeviewElement, [jsonData]);
+
+            // Add event listener for expanding/collapsing nodes
+            treeviewElement.addEventListener('click', function (event) {
+                var target = event.target;
+
+                if (target.classList.contains('has-children')) {
+                    target.classList.toggle('collapsed');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

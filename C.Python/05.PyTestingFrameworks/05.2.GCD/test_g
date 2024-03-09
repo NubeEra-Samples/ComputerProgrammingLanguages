@@ -1,0 +1,19 @@
+# test_gcd.py
+import unittest
+from gcd import gcd
+
+class TestGCD(unittest.TestCase):
+    def test_gcd_positive_numbers(self):
+        result = gcd(48, 18)
+        self.assertEqual(result, 6)
+
+    def test_gcd_negative_numbers(self):
+        result = gcd(-48, 18)
+        self.assertEqual(result, 6)
+
+    def test_gcd_zero(self):
+        result = gcd(0, 18)
+        self.assertEqual(result, 18)
+
+if __name__ == '__main__':
+    unittest.main()
