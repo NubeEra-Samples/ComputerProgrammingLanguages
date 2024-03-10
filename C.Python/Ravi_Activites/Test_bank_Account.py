@@ -10,7 +10,7 @@ class TestBankAccount(unittest.TestCase):
         self.assertEqual(self.account.get_balance(),0)
 
     def test_deposite(self):
-        self.assertTrue(self.account.deposite(1500))
+        self.assertTrue(self.account.deposit(1500))
         self.assertEqual(self.account.get_balance(), 1500)
 
     def test_withdraw(self):
