@@ -1,0 +1,18 @@
+Environment Management Tool
+PIP---> Virtualenv  or Anaconda --> conda
+python.exe -m pip install --upgrade pip
+
+pip install virtualenv
+pip show virtualenv
+
+virtualenv .envDev
+.envDev\Scripts\activate
+
+pip install -r requirements.txt
+
+pip freeze > requirements.txt
+
+pip list  # All accesciable libraries lists
+
+pip install quartz-scheduler
+pip install quartz
