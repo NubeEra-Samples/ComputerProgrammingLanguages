@@ -5,14 +5,14 @@ class BankAccount:
 
     def deposit(self, amount):
         if amount > 1000:
-            self.balance = balance + amount
+            self.balance =+ amount
             return True
         else:
             return False
 
     def withdraw(self, amount):
         if 0 < amount <= self.balance:
-            self.balance = balance - amount
+            self.balance =- amount
             return True
         else:
             return False
